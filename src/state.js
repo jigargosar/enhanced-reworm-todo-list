@@ -17,7 +17,7 @@ export const completeTodo = todo => {
   todos.set(
     produce(state => {
       const item = state.list.find(item => item.id === todo.id)
-      item.completed = !!!item.completed
+      item.completed = !Boolean(item.completed)
     })
   )
 }
